@@ -19,7 +19,7 @@ brand_origin_id integer references car_shop.brand_origin(brand_origin_id)
 
 /*создание таблицы models*/
 CREATE TABLE car_shop.models (
-brand_id references car_shop.brands(brand_id),
+brand_id integer references car_shop.brands(brand_id),
 model_id serial PRIMARY KEY,
 model_name VARCHAR NOT NULL,
 gasoline_consumption numeric(3, 1) null --в условии указано среднее по модификации, поэтому тут
